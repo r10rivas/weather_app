@@ -30,13 +30,15 @@ const stateToIconName = (weatherState) => {
 }
 
 const getWeatherIcon = weatherState => {
-  return (<WeatherIcons name={stateToIconName(weatherState)} size='2x'/>)
+  return (<WeatherIcons className='weather-temperature-icon' name={stateToIconName(weatherState)} size='3x'/>)
 }
 
 const WeatherTemperature = ({temperature, weatherState}) => (
-  <div>
-    {getWeatherIcon(weatherState)}
-    <span>{`${temperature} C°`}</span>
+  <div className='weather-temperature-wrapper'>
+    <div className='weather-temperature-wrapper-icon '>
+      {getWeatherIcon(weatherState)}
+    </div>
+    <span className='weather-temperature-description'>{`${temperature} C°`}</span>
   </div>
 )
 
