@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import WeatherLocation from './components/weatherLocation';
+import LocationList from './components/locationList';
 
 function App() {
   return (
     <div className='App'>
-      <WeatherLocation></WeatherLocation>
+      <LocationList/>
     </div>
   );
 }

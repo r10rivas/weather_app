@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 import Location from './location'
 import WeatherData from './weatherData/'
 import transformWeather from './../../services/transformWeather'
+import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-
-const location = 'Buenos Aires,ar'
-const token = 'e9d1e025285c65ad323a174cd42d9d5d'
-const api_url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${token}`;
-
+const token = 'e9d1e025285c65ad323a174cd42d9d5d';
+// const api_url = 'http://api.openweathermap.org/data/2.5/weather';
 class WeatherLocation extends Component {
   // state = {
   //   data: data,
   //   city: 'buenos aires',
   // }
 
-  constructor() {
+  constructor({city}) {
     super();
     this.state = {
-      city: 'buenos aires',
+      city,
       data: null
     }
   }
@@ -41,6 +39,7 @@ class WeatherLocation extends Component {
   }
 
   handleUpdateClick = () => {
+    const api_url = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=${token}`;
     fetch(api_url).then((response) => {
       return response.json();
     }).then((data_api) => {
@@ -58,10 +57,13 @@ class WeatherLocation extends Component {
       <div>
         <Location city={city}/>
         {data ? <WeatherData data={data}/> : <CircularProgress color={'secondary'} size={50}/>}
-        {/* <button onClick={this.handleUpdateClick}>Actualizar</button> */}
       </div>
     )
   }
+}
+
+WeatherLocation.protoTypes = {
+  city: PropTypes.string,
 }
 
 export default WeatherLocation;
