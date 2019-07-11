@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Location from './location'
 import WeatherData from './weatherData/'
-import transformWeather from './../../services/trasnformWeather'
+import transformWeather from './../../services/transformWeather'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 
