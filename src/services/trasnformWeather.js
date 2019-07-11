@@ -10,12 +10,11 @@ import {
 
 
 const getWeatherState = weather => {
-  console.log( weather );
   return RAIN
 }
 
 const getTemperature = tempKelvin => {
-  return convert(tempKelvin).from('K').to('C').toFixed(2);
+  return Number(convert(tempKelvin).from('K').to('C').toFixed(2));
 }
 
 const transformWeather = data_api => {
