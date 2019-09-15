@@ -1,11 +1,18 @@
 .weather-data {
-  width: 600px;
-  height: 80px;
   display: flex;
-  /* flex-direction: column; */
+  justify-content: center;
+  // margin: 0rem 2rem;
+  // width: 600px;
+  width: 85%;
+  height: 80px;
   align-items: center;
   border-radius: 10px;
   background-color: rgba(200, 200, 200, 0.5);
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .weather-temperature-wrapper {
@@ -26,22 +33,7 @@
   color: red;
 }
 
-
-
 .weather-temperature-description {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-}
-
-.weather-extraInfo {
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  width: 50%;
-}
-
-.weather-extraInfo-text {
-  color: #1535C5;
-  font-weight: bold;
-  font-size: 18px;
 }

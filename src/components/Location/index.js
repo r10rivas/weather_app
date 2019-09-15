@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Location.scss';
 
 const Location = ({city}) => {
-  return(
-    <div>
-      <h1>{city}</h1>
+  return (
+    <div className='location'>
+      <h1 className='location__title'>{city}</h1>
     </div>
   )
 }

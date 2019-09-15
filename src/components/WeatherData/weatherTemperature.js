@@ -6,7 +6,7 @@ import {
   RAIN,
   SNOW,
   WINDY
-} from './../../../constants/weathers';
+} from '../../constants/weathers';
 import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
 

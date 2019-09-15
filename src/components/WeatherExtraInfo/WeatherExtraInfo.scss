@@ -1,0 +1,20 @@
+.weather-extraInfo {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 50%;
+
+  &__text {
+    color: #1535C5;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-extraInfo {
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+}
