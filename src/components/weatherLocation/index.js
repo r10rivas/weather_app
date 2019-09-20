@@ -7,7 +7,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import './WeatherLocation.scss';
 
 const token = 'e9d1e025285c65ad323a174cd42d9d5d';
-// const api_url = 'http://api.openweathermap.org/data/2.5/weather';
 class WeatherLocation extends Component {
   // state = {
   //   data: data,
@@ -26,18 +25,18 @@ class WeatherLocation extends Component {
     this.handleUpdateClick();
   }
 
-  componentDidMount() {
-    console.log( 'ya fue montado' );
-  }
+  // componentDidMount() {
+  //   console.log( 'ya fue montado' );
+  // }
 
 
-  componentWillUpdate() {
-    console.log( 'sera updateado' );
-  }
+  // componentWillUpdate() {
+  //   console.log( 'sera updateado' );
+  // }
 
-  componentDidUpdate() {
-    console.log( 'fue updateado' );
-  }
+  // componentDidUpdate() {
+  //   console.log( 'fue updateado' );
+  // }
 
   handleUpdateClick = async () => {
     const api_url = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=${token}`;
@@ -51,14 +50,14 @@ class WeatherLocation extends Component {
     }
   }
 
-  render = () => {
-    console.log( 'render' );
-    const {city, data}= this.state;
-    return(
-      <div className='weather-location'>
+  render() {
+    // console.log( 'render' );
+    const { onWeatherLocationClick } = this.props;
+    const { city, data } = this.state;
+    return (
+      <div className='weather-location' onClick={onWeatherLocationClick}>
         <Location city={city}/>
         {data ? <WeatherData data={data}/> : <CircularProgress color={'secondary'} size={50}/>}
-        {console.log(data, 'qqqq')}
       </div>
     )
   }
@@ -66,6 +65,7 @@ class WeatherLocation extends Component {
 
 WeatherLocation.protoTypes = {
   city: PropTypes.string,
+  onWeatherLocationClick: PropTypes.func,
 }
 
 export default WeatherLocation;

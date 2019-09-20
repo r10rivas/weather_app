@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import WeatherTemperature from './weatherTemperature'
 import WeatherTemperature from '../WeatherTemperature';
 import WeatherExtraInfo from '../WeatherExtraInfo/';
 import './WeatherData.scss'

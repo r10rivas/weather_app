@@ -1,0 +1,20 @@
+.forecast-extended {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5rem 0rem;
+
+  &__warpper {
+    margin-top: 3.5rem;
+    padding: .5rem 0rem 1rem;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    background-color: #ffff;
+    box-shadow: 10px 10px 5px 0px #9c9a9c;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+  }
+}
